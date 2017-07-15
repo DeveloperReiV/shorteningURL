@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	$('#createBTN').on('click', function(){
 		var url = $('#url').val();
 		var main_url = $('#main_url').val();

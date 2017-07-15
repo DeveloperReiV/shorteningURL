@@ -4,8 +4,6 @@ namespace app\controllers;
 
 use app\core\Controller;
 use app\core\View;
-use app\lib\DataBase;
-use app\models\Main;
 use app\models\URL;
 
 
@@ -47,6 +45,14 @@ class MainController extends Controller
 			}
 		}
 		$view->display('main\index.php');
+	}
+
+	public function action_all()
+	{
+		$view = new View();
+		$url = new URL();
+		$view->urls = $url->findAll();
+		$view->display('main\all.php');
 	}
 
 }

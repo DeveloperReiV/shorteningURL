@@ -25,7 +25,8 @@
 	<?php endif;?>
 
 	<?php if($url && $short_url):?>
-		<p>Обычный URL: <a href=''><?=$url?></a></p>
-		<p>Короткий URL: <a href=''><?=$short_url?></a></p>
+		<p>Короткий URL: <a href='<?=$url?>' target="_blank"><?=$short_url?></a></p>
+		<hr>
 	<?php endif;?>
+<a href="main/all" id="all_show">Показать все</a>
 </body>
