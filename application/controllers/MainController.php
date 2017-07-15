@@ -14,7 +14,7 @@ class MainController extends Controller
 		$view = new View();
 		$url = new URL();
 		
-		if($_POST['url'] && $url::inspectionURL(trim($_POST['url'])))
+		if(isset($_POST['url']) && $url::inspectionURL(trim($_POST['url'])))
 		{
 			$str_url = trim($_POST['url']);
 			
@@ -26,7 +26,7 @@ class MainController extends Controller
 			{
 				$view->url = $str_url;
 				
-				if($_POST['main_url'] && $url::inspectionURL(trim($_POST['main_url'])))
+				if(isset($_POST['main_url']) && $url::inspectionURL(trim($_POST['main_url'])))
 				{
 					$view->short_url = trim($_POST['main_url']);
 				}

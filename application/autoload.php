@@ -5,6 +5,7 @@
  */
 
 spl_autoload_register( 'my_autoload' );		//регистрируем функцию "my_autoload()" в качестве функции для автозагрузки
+require SITE_ROOT . '/vendor/autoload.php';
 
 function my_autoload( $class )
 {

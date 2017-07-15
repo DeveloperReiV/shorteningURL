@@ -20,11 +20,11 @@
 	<label><sup>*</sup> Поле обязятельно для заполнения</label>
 	<hr>
 
-	<?php if($status):?>
+	<?php if(isset($status)):?>
 		<p style='color:red;'><?=$status?></p>
 	<?php endif;?>
 
-	<?php if($url && $short_url):?>
+	<?php if(isset($url) && isset($short_url)):?>
 		<p>Короткий URL: <a href='<?=$url?>' target="_blank"><?=$short_url?></a></p>
 		<hr>
 	<?php endif;?>

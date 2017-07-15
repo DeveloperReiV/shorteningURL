@@ -21,7 +21,8 @@ class URL extends Model
 		$rand = '';
 		$arr_url = parse_url($url);
 		
-		if($arr_url['port'] || $arr_url['user'] || $arr_url['pass'] || $arr_url['path'] || $arr_url['query'] || $arr_url['fragment'])
+		if(isset($arr_url['port']) || isset($arr_url['user']) || isset($arr_url['pass']) || isset($arr_url['path']) ||
+			isset($arr_url['query']) || isset($arr_url['fragment']))
 		{
 			$rand = $arr_url['path'] == '/' ? '' :  '/' . substr(str_shuffle($h), 0, 5);
 		}
