@@ -5,10 +5,10 @@
 
 use app\core;
 
-require __DIR__ . '/const.php';
-require DR . '/autoload.php';    //файл автозагрузки
-require DR . '/lib/DataBase.php';
-require DR . '/lib/functions.php';
+require __DIR__ . DIRECTORY_SEPARATOR . 'const.php';
+require DR . DS .'autoload.php';    //файл автозагрузки
+require DR . DS .'lib' . DS . 'DataBase.php';
+require DR . DS .'lib' . DS . 'functions.php';
 
 core\Route::start();
 

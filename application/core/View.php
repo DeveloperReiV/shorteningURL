@@ -30,7 +30,7 @@ class View
 	 */
 	public function render( $template)
 	{
-		$path = __DIR__ . '\..\views\\' . $template;
+		$path = APP . DS . 'views' . DS . $template;
 
 		foreach( $this->data as $key => $value )
 		{
@@ -55,6 +55,6 @@ class View
 	public function display( $template )
 	{
 		$content = $this->render( $template );
-		include DR . '\views\base.php';
+		include APP . DS . 'views' . DS .'base.php';
 	}
 }

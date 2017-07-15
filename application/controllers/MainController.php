@@ -44,7 +44,7 @@ class MainController extends Controller
 				$url->insert(); 
 			}
 		}
-		$view->display('main\index.php');
+		$view->display('main' . DS . 'index.php');
 	}
 
 	public function action_all()
@@ -52,7 +52,7 @@ class MainController extends Controller
 		$view = new View();
 		$url = new URL();
 		$view->urls = $url->findAll();
-		$view->display('main\all.php');
+		$view->display('main' . DS . 'all.php');
 	}
 
 }
