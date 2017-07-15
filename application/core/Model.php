@@ -32,13 +32,13 @@ class Model
 	 */
 	public function insert()
 	{
-		$db          = new DataBase();
-		$cols        = array_keys($this->data);                                                //формируем массив cols заполненный ключами массива data
+		$db = new DataBase();
+		$cols = array_keys($this->data);						//формируем массив cols заполненный ключами массива data
 		$colsPrepare = array_map(function ($col_name)
 		{
 			return ':' . $col_name;
-		}, $cols);        //перед каждым элементом массива cols добавляем ":"
-		$dataExec    = [];
+		}, $cols);								//перед каждым элементом массива cols добавляем ":"
+		$dataExec = [];
 		foreach($this->data as $key => $value)
 		{
 			$dataExec[':' . $key] = $value;

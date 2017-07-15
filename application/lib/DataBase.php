@@ -48,8 +48,8 @@ class DataBase
 	 */
 	public function query( $statement, $params = [ ] )
 	{
-		$stmt = $this->dbh->prepare( $statement );          //подготавливаем запрос
-		$stmt->execute( $params );                          //выполняем запрос с подстановкой параметров
+		$stmt = $this->dbh->prepare( $statement );			//подготавливаем запрос
+		$stmt->execute( $params );							//выполняем запрос с подстановкой параметров
 
 		return $stmt->fetchAll( \PDO::FETCH_CLASS, $this->className );
 	}

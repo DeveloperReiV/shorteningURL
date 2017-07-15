@@ -4,7 +4,7 @@
 <body>
 <a href="/">Назад</a><br/><br/>
 <?php if(isset($urls)): ?>
-	<table border="1">
+	<table border="1" width="100%">
 		<tr>
 			<td>Полная ссылка</td>
 			<td>Короткая ссылка</td>

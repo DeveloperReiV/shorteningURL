@@ -8,7 +8,7 @@ class View
 	 * @var array массив данных для отправки в шаблон
 	 * @access protected
 	 */
-	protected $data = [ ];    //массив данных
+	protected $data = [ ];		//массив данных
 
 	public function __set( $name, $value )
 	{
